@@ -11,7 +11,7 @@ class ApiController extends Controller
      */
     public function index()
     {
-        //
+        //My first laravel merge
     }
 
     /**
