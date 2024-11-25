@@ -1,0 +1,246 @@
+.comment-box{
+
+    background-color: white;
+    border-radius: 5px;
+    width:70%;
+    box-shadow:0px 0px 5px 5px rgb(232, 231, 231);
+}
+
+.start-box{
+    width: 30%;
+}
+
+.main-comment-page{
+    display: flex;
+}
+
+.reply-input-container{
+    width: 70%;
+    gap:1px;
+
+}
+
+.reply-submit{
+    height: 30px;
+    border: none;
+    background-color: rgb(38, 38, 191);
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+}
+
+.reply-textarea:focus{
+    transition: ease 0.5;
+    border-color: rgb(58, 57, 57);
+    box-shadow: 0 0 5px rgb(233, 231, 231);
+
+}
+
+.reply-input-box-form{
+    display: flex;
+    gap: 1px;
+}
+
+
+.reply-input-box{
+
+    margin-left: 70px;
+
+}
+
+button{
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+button:hover{
+
+    filter: saturate(60%);
+}
+
+
+
+img{
+    height: 25px;
+    width: 25px;
+
+}
+
+.fa-trash{
+    color: red;
+}
+
+.fa-edit{
+    color: rgb(23, 39, 213);
+}
+
+.fa-reply{
+    color: blue;
+}
+
+.user-detail{
+    margin-left: -30px;
+
+}
+.counts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.upvote-count{
+   margin-top: 10px;
+}
+.paddin-0{
+margin-left:-10px ;
+}
+
+.hidden{
+    display: none;
+}
+.user-time{
+    font-family:Cursive	;
+
+}
+
+.comment-tools{
+    display: flex;
+    gap:5px;
+}
+
+.user-name{
+    font-family: serif;
+    font-weight: bold;
+}
+
+.user-detail{
+    margin-top: 10px;
+    display: flex;
+    gap:5px;
+}
+
+.user-comment-data{
+    margin-left: 55px;
+}
+
+.reply{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.fa{
+    cursor: pointer;
+}
+
+
+.reply-input-container{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: left;
+}
+
+.reply-submit{
+    width: 10%;
+}
+
+.left-margin{
+    margin-left: 100px;
+}
+.comment-section{
+    display: flex;
+    background-color: rgb(247, 247, 247);
+}
+
+#commentText{
+width: 50%;
+}
+
+.view-reply-class{
+    color: blue;
+    border: none;
+    text-decoration: none;
+    background: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    transition: ease 0.5s;
+}
+
+.commentDownvote:hover,.commentUpvote:hover{
+    color:gold
+}
+
+
+
+.view-reply-class:hover{
+    border-radius: 20px;
+
+    background-color:#AFDBF5;
+
+}
+
+.fa-angle-up{
+    margin-right: 2px;
+}
+
+
+.comment-rating {
+    direction: rtl;
+    display: inline-block;
+    padding: 20px;
+    cursor: default;
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      /* color: #bbb; */
+      font-size: 2rem;
+      padding: 0;
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      color: #f2b600;
+    }
+
+    .rating-percent{
+        font-weight: bold;
+        color:black;
+    }
+    /* .label:hover,
+    .label:hover ~ label,
+    input[type="radio"]:checked ~ label {
+
+    } */
+  }
+
+
+  .star-rating {
+    direction: rtl;
+    display: inline-block;
+    padding: 20px;
+    cursor: default;
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .comment-review {
+      color: #bbb;
+      font-size: 2rem;
+      padding: 0;
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .comment-review:hover,
+    .comment-review:hover ~ .comment-review,
+    input[type="radio"]:checked ~ .comment-review {
+      color: #f2b600;
+    }
+  }
+

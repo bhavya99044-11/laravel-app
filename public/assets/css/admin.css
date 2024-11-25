@@ -1,0 +1,124 @@
+
+
+.container{
+    font-family: "Poppins", serif;
+    background-color: aquamarine;
+  }
+
+ body{
+    background-color: #d9f7fa!important;
+ }
+
+.product-page{
+    position: absolute;
+    top: 50%;
+    height:80%;
+    left: 50%;
+    width:50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background-color:#ECFDFF !important;
+}
+
+.row{
+    width: 100%;
+}
+
+.title-page{
+   padding-bottom: 10px;
+}
+
+.panel h1{
+    font-size: 40px;
+    font-weight: 700;
+    color:white;
+    text-shadow: 0 0 8px #000;}
+
+.add-button{
+    margin-left: 2rem;
+    text-decoration: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: #74a5aa;
+}
+.table{
+    width:70%;
+}
+.err{
+    color: red;
+}
+
+input[type="number"]{
+width: 200px;
+}
+
+th, td,tr{
+    text-align: center;
+    height:50px;
+    width:50px;
+
+}
+
+.updatedata , .deleteData{
+    cursor: pointer;
+    color: red;
+    font-size: large;
+}
+
+#saveInline,#cancelInline{
+    font-size: large;
+    cursor: pointer;
+}
+
+#saveInline{
+    color:orange;
+    margin-right: 5px;
+}
+
+.tableRow{
+    width:70%;
+}
+#cancelInline{
+    color: red;
+}
+
+
+.gap{
+    margin-bottom: 2rem;
+    font-size: large;
+    position: relative;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.panel{
+
+}
+
+.for-control{
+    width: 50%;
+}
+
+
+
+.table-data{
+    margin-top: 100px;
+}
+
+.hide{
+    display: none;
+}
+
+label{
+   color: black;
+   font-size: medium;
+   font-weight: 500;
+}
+.add-button{
+    width: 100px !important;
+}
+.table td, .table th {
+    vertical-align: baseline !important;
+}

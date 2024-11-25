@@ -1,0 +1,139 @@
+
+
+  body{
+    background-color: red;
+  }
+.second-header{
+    margin-bottom:50px;
+}
+  .category-select{
+    height:auto;
+    overflow-y:auto;
+  }
+  option{
+    overflow-y:scroll;
+  }
+  .search-suggestions{
+
+    list-style: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    padding: 0;
+    width:auto;
+    margin: 0;
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: #fdfdfd;
+  }
+
+  .serach-box{
+    position: relative;
+  }
+
+  .language-select{
+    text-decoration: none;
+    border: none;
+    outline:none;
+
+    background: none;
+    font-size: large;
+    color:#fdfdfd;
+    font-weight: bold;
+  }
+  .language-options{
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height:100px;
+    right: 0;
+    padding: 0;
+    text-align: start;
+    width:85px;
+    margin: 0;
+  }
+
+  .language-options{
+    display: none;
+  }
+  .language-main{
+    position: relative;
+    cursor: pointer;
+  }
+
+
+  .language-main:hover .language-options{
+        display: block;
+}
+
+
+
+  .first-language{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .decoration{
+    text-decoration: none;
+
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .last-header{
+    text-align: start;
+  }
+
+  .header-end{
+    align-items: center;
+    gap:25px;
+    display: flex;
+  }
+
+.shoppin-cart{
+    position: relative;
+}
+
+  .cart-count{
+    position:absolute;
+    top: 2%;
+    background-color: forestgreen;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    color:red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .count-size{
+    font-size: 15px;
+    font-weight: 100;
+
+  }
+
+  .second-header{
+    background-color: #283232;
+  }
+
+  .search-cursor{
+    cursor: pointer;
+  }
+
+  option{
+    overflow-y:scroll;
+    }
+    .highlight{
+        background: lightgrey
+      }
+
+
+.thumb-box img {
+    height: 0% !important;
+}
