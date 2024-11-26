@@ -72,6 +72,7 @@ function lastSeen($time)
 {
     $currentdate = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now());
     $time = Carbon::createFromFormat('Y-m-d H:i:s', $time);
+    $timeDiff=$time->diff(date: $currentdate)->format('%H:%i');
     if ($time < $currentdate) {
         $string = '';
 
@@ -79,7 +80,7 @@ function lastSeen($time)
         if($time->diffInYears($currentdate)>1){
             $years = $time->diff($currentdate)->format('%y');
             $string .= $years .' year';
-            $string .= ' ago';
+            $string .= ' ago at '.$timeDiff;
             return $string;
         }
         //For Show diff in months and week name
@@ -96,6 +97,7 @@ function lastSeen($time)
                 $string.=' on ';
                 $string.=$day;
             }
+            $string.= ' at'. $timeDiff;
             return $string;
         }
         //For show difference in days
@@ -112,7 +114,8 @@ function lastSeen($time)
                 }
                 $string .= $dayAgo[1][1] . ' ' . 'hour';
             }
-            $string .= ' ago';
+            $string .= ' ago ';
+            $string .= ' at ' .$timeDiff;
             return $string;
         }
         else if ($time->diffInHours($currentdate) > 1) {
