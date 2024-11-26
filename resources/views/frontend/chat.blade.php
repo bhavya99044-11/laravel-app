@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/laravel-echo@^1.0.0/dist/echo.iife.js"></script>
     <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+    <script src="{{ asset('assets/js/push.min.js') }}"></script>
+
     @push('styles')
         <link rel="stylesheet" href="{{ asset('assets/css/chat.css') }}">
     @endpush
@@ -37,7 +39,7 @@
                                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D">
                                 <div class="data  ms-3">
                                     <div class="span">{{ $data['receiver']->name }}</div>
-                                    <span class="status offline">{{$data['last_active']}}</span>
+                                    <span class="status offline">{{ $data['last_active'] }}</span>
                                 </div>
                             </div>
                             <div class="chat-box" id="chat-box">
@@ -82,6 +84,7 @@
         <script>
             $(document).ready(function() {
 
+
                 //Pusher Echo setup to show user active or not
                 //If user already in channel it will show active using here functionality
                 //If usaer join after then using joining his activity will be updated
@@ -92,20 +95,20 @@
                     forceTLS: true,
                 });
                 const receiver_id = $('.user-header').data('id');
-                let status=document.querySelector('.status');
+                let status = document.querySelector('.status');
                 echo.join('status-channel')
                     .here((users) => {
-                        const userId=element=>element.id==receiver_id;
-                        let user=users.some(userId)
-                        if(user){
-                        status.classList.add('active'),
-                        status.textContent='active';
+                        const userId = element => element.id == receiver_id;
+                        let user = users.some(userId)
+                        if (user) {
+                            status.classList.add('active'),
+                                status.textContent = 'active';
                         }
                     })
                     .joining((users) => {
-                        if(users.id==receiver_id){
-                        status.classList.add('active'),
-                        status.textContent='active';
+                        if (users.id == receiver_id) {
+                            status.classList.add('active'),
+                                status.textContent = 'active';
                         }
                     })
 
@@ -127,17 +130,31 @@
                 var channel = pusher.subscribe(`chat-${authId}`);
 
                 channel.bind('ChatSender', function(data) {
+
                     data.forEach((message) => {
+                        if (message.sender_id != receiver.id) {
+                            if (!window.Notification) {
+
+                                console.log('Browser does not support notifications.');
+                            } else {
+
+                                // check if permission is already granted
+                                    var notify = new Notification(message.sender_id,{
+                                        body: message.message,
+                                    });
+
+                            }
+                        }
                         if (receiver.id == message.sender_id) {
                             sendMessage(message, 'received')
                         }
                     })
                 });
                 console.log(receiver.id);
-                var offlineChannel=pusher.subscribe(`chat-${receiver.id}`)
+                var offlineChannel = pusher.subscribe(`chat-${receiver.id}`)
                 offlineChannel.bind('ChatSender', function(data) {
                     status.classList.remove('active'),
-                    status.textContent='last seen recently';
+                        status.textContent = 'last seen recently';
                 });
                 const button = document.getElementById('send-button');
                 const chatBox = document.getElementById('chat-box');

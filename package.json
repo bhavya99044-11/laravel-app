@@ -11,6 +11,7 @@
         "autoprefixer": "^10.4.2",
         "axios": "^1.7.4",
         "laravel-echo": "^1.17.0",
+        "laravel-mix": "^6.0.49",
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.31",
         "pusher-js": "^8.4.0-rc2",
@@ -18,6 +19,7 @@
         "vite": "^5.0"
     },
     "dependencies": {
-        "localtunnel": "^2.0.2"
+        "localtunnel": "^2.0.2",
+        "push.js": "^1.0.12"
     }
 }
